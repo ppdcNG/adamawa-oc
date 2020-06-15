@@ -21,11 +21,6 @@
   <title>Adamawa OC Portal</title>
 
   <style>
-    html,
-    body {
-      font-family: 'Open Sans', sans-serif;
-    }
-
     .select2-search__field {
       display: none;
     }
@@ -80,7 +75,7 @@
           <!-- main menubar -->
           <div class="ui large secondary inverted pointing menu">
             <a class="toc item">
-              <i class="sidebar icon"></i>
+              <i class="fas fa-bars"></i>
             </a>
             <a class="active item">Home</a>
             <a class="item" href="views/project.html">Projects</a>
@@ -93,7 +88,7 @@
 
         </div>
         <div class="ui text container" id="header-text">
-          <img src="./adamawaIcon.png" width="200" alt="adamawa-logo" data-aos="flip-left">
+          <img src="./img/adamawaIcon.png" width="200" alt="adamawa-logo" data-aos="flip-left">
           <h2 class="ui inverted header" data-aos="fade-right" data-aos-duration="1000">
             Adamawa Open Contracting Portal
           </h2>
@@ -102,16 +97,17 @@
             State
           </h3>
           <div class="ui medium main-green button" style="margin-top: 1rem">
-            Get Started <i class="fas fa-arrow-down"></i>
+            <a href="#main-content" style="color:#fff">Get Started <i class="fas fa-arrow-down"></i></a>
           </div>
         </div>
       </div>
     </div>
-    <div class="ui vertical stripe">
+    <div class="ui vertical stripe" id="main-content">
       <div class="ui middle aligned stackable grid container">
         <div class="row">
           <div class="six wide left floated column">
-            <img src="" class="ui large bordered rounded image" />
+            <lottie-player src="https://assets8.lottiefiles.com/temp/lf20_TOE9MF.json" background="transparent"
+              speed="1" style="width: 400px; height: 300px;" loop autoplay></lottie-player>
           </div>
           <div class="eight wide column">
             <h3 class="ui header">
@@ -133,7 +129,8 @@
         <div class="ui equal width stackable internally  grid container">
           <div class="row">
             <div class="center aligned column">
-              <p class="ui huge">Summary of this Portal</p>
+              <h4 class="ui huge" style="margin-top: 2rem">Summary of this Portal</h4>
+              <hr width="50%" />
             </div>
           </div>
           <div class="aligned row">
@@ -249,8 +246,7 @@
             </div>
 
             <div class="image">
-              <img
-                src="https://i1.wp.com/nairametrics.com/wp-content/uploads/2019/04/Solar.jpg?fit=900%2C563&ssl=1" />
+              <img src="https://i1.wp.com/nairametrics.com/wp-content/uploads/2019/04/Solar.jpg?fit=900%2C563&ssl=1" />
             </div>
             <div class="content">
               <div class="header">
@@ -281,8 +277,7 @@
               2020
             </div>
             <div class="image">
-              <img
-                src="https://i2.wp.com/www.von.gov.ng/wp-content/uploads/2018/06/UNCHR.jpg?resize=696%2C522&ssl=1" />
+              <img src="https://i2.wp.com/www.von.gov.ng/wp-content/uploads/2018/06/UNCHR.jpg?resize=696%2C522&ssl=1" />
             </div>
             <div class="content">
               <div class="header">
@@ -340,10 +335,10 @@
       <div class="ui container">
         <div class="ui stackable inverted divided equal height stackable grid">
           <div class="five wide column">
-            <h4 class="ui inverted header">About</h4>
+            <h4 class="ui inverted header">About Us</h4>
             <div class="ui inverted link list">
-              <a href="#" class="item">Sitemap</a>
-              <a href="#" class="item">Contact Us</a>
+              <a href="#" class="item">About</a>
+              <a href="#" class="item">Contact</a>
             </div>
           </div>
           <div class="five wide column">
@@ -355,12 +350,12 @@
           </div>
           <div class="five wide column">
             <h4 class="ui inverted header">Social</h4>
-              <a href="#" class="item" style="color: #ddd;">
-                <i class="fab fa-twitter fa-2x"></i>
-              </a>
-              <a href="#" class="item" style="color: #ddd;">
-                <i class="fab fa-facebook fa-2x"></i>
-              </a>
+            <a href="#" class="item" style="color: #ddd;">
+              <i class="fab fa-twitter fa-2x"></i>
+            </a>
+            <a href="#" class="item" style="color: #ddd;">
+              <i class="fab fa-facebook fa-2x"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -378,6 +373,8 @@
   <script>
     AOS.init();
   </script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
 
   <!-- high charts -->
   <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -398,17 +395,6 @@
       // create sidebar and attach to menu open
       $(".ui.sidebar").sidebar("attach events", ".toc.item");
       $(".ui.dropdown").dropdown();
-
-      // collapsed optgroup
-      // $("#select-optgroup").select2({
-      //   closeOnSelect: false,
-      //   placeholder: "Select MDA"
-      // });
-
-      // toggle open and close the options
-      // $("body").on('click', '.select2-results__group', function () {
-      //   $(this).siblings().toggle();
-      // });
 
       // new test
       $("#select-group").select2();
